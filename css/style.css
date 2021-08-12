@@ -1,0 +1,118 @@
+/*selctores globales*/
+:root {
+    --fuenteHeading:'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --primario: #784d3c;
+    --blanco: #ffffff;
+    --negro: #000000;
+}
+
+html {
+    box-sizing: border-box;/*para ser que el border padding etc no afecte el ancho de nuestros elementos*/
+    font-size: 62.5%; /*para que 1 rem = 10px*/
+}
+/*finalizacion del rease*/
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2; /*interlineado en los blog se recomienda asi */
+}
+/*Globales*/
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto; /*centra el contenido horizontalmente en la pantalla */
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,h2,h3,h4 {
+    font-family: var(--fuenteHeading);
+}
+h1{
+    font-size: 4.8rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3.2rem;
+}
+h4 {
+    font-size: 2.8rem;
+}
+img {
+    max-width: 100%;
+}
+
+/* Utilidades*/
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+/*header*/
+.header {
+    background-image: url(../img/banner.jpg);
+    height: 60rem;
+    /*adapta la imagen a diferentes tamaños. enfocando el centro de la pantalla*/
+   /*/ background-size: cover;/*paar que tome todo el espacio disponible*/
+    background-repeat: no-repeat;
+    /*imagen va fluir hacia el centro. Doble center porque la imagen se centra vertical y horizontal*/
+    background-position: center center;
+}
+.header__texto {
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem;/*para tener separacion. En ese espacio se agrega el nav*/
+}
+@media (min-width: 768px) {
+    .header__texto {
+        margin-top: 15rem;
+    }
+}
+
+/*como estamos acomando elementosdentro de un contenedor, se utiliza mejor flex-box*/
+@media (min-width: 768px) {
+    .barra {
+        display: flex; /*acomoda el texto de la etiquita  <a> al lado del otro*/
+        justify-content: space-between;/*acomoda l <a> hacia el otro lado alineado horizontal*/
+        align-items: center;/*alinear verticalmente*/
+    }
+}
+.logo {
+    color: var(--blanco);  
+
+}
+.logo__nombre {
+    font-weight: 400;
+}
+.logo__bold {
+    font-weight: 700;
+}
+/*para pantalla grande*/
+@media (min-width: 768px) {
+    .navegacion {
+        display: flex;
+        gap: 2rem;/**separacion*/
+    }
+}
+
+.navegacion__enlace {
+    display: block;/*<a> los acomada uno debajo del otro*/
+    text-align: center;
+    font-size:  1.8rem;
+    color: var(--blanco); 
+}
