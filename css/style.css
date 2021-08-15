@@ -27,7 +27,7 @@ body {
 .contenedor {
     max-width: 120rem;
     width: 90%;
-    /* reemplaza lo de arriba width: min(90%, 120rem);*/
+    /* reemplaza lo de arriba  width: min(90%, 120rem);*/
     margin: 0 auto; /*centra el contenido horizontalmente en la pantalla */
 }
 
@@ -191,5 +191,15 @@ img {
     background-color: var(--negro);
     padding-bottom: 3rem ;
     margin-top: 4rem; /*para tener algo de separacion*/
-
+}
+/*sobre nosotros*/
+@media (min-width: 768px) {
+    .sobre-nosotros{
+        display: flex;
+        gap: 2rem;
+    }
+    .sobre-nosotros__imagen,
+    .sobre-nosotros__texto {
+       flex-basis: 50%;
+    }
 }
