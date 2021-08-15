@@ -68,6 +68,12 @@ img {
 }
 
 /*header*/
+.webp .header {
+    background-image: url(../img/banner.webp);
+}
+.no-webp .header {
+    background-image: url(../img/banner.jpg);
+}
 .header {
     background-image: url(../img/banner.jpg);
     height: 60rem;
@@ -150,12 +156,15 @@ img {
      text-transform: uppercase;
      font-weight: 700; /*negrilla*/
      margin-bottom: 2rem; /*para que haya separacion hacia abajo*/
-
+    border: none;
  }
  @media (min-width: 768px) {
      .boton {
          display: inline-block; /*toma el espacio que requieres, respeta el margin */ 
      }
+ }
+ .boton:hover {
+     cursor: pointer;
  }
  
  .boton--primario {
@@ -227,4 +236,34 @@ img {
  .curso__label,
  .curso__info {
      font-size: 2rem;
+ }
+ /**Contacto**/
+ .contacto-bg{
+     background-image: url(../img/contacto.jpg);
+     height: 40rem;
+     background-size: cover;
+     background-repeat: no-repeat;
+ }
+ .formulario {
+    background-color: var(--blanco);
+    /*para que el formulario se monte en la imagen*/
+    margin: -5rem auto 0 auto; /*lo lleva hacia arriba*/
+    width: 95%;
+    padding: 5rem;
+ }
+ .campo {
+    display: flex;
+    margin-bottom: 2rem;/*separacion en los campos*/
+ }
+ .campo__label {
+    flex: 0 0 9rem; /*deja fijo el tamaño  del formulario*/
+    text-align: right;
+    padding-right: 2rem;
+ }
+ .campo__field {
+    flex: 1;/*extiende los campos del formulario*/
+    border: 1px solid var(--gris);
+ } 
+ .campo__field--textarea{
+    height: 20rem;
  }
